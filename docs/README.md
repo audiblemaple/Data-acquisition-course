@@ -1,1 +1,1 @@
-Website: https://data-acquisition-course.onrender.com/
+Website: https://audiblemaple.github.io/Data-acquisition-course/
