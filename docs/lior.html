@@ -1,57 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lior Jigalo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <style>
+        body {
+            background-image: url("images/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .back-to-top-button {
+            background-color: #f0f0f0;
+            border: 2px solid #000;
+            border-radius: 25px;
+            padding: 8px 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-to-top-button:hover {
+            background-color: #61615e;
+            color: #f0f0f0;
+        }
+    </style>
+    <header class="bg-info text-white text-center py-4">
+        <h1>Crawl Commandos</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="tzahi.html">Tzahi Bakal</a></li>
+                <li class="nav-item"><a class="nav-link" href="lior.html">Lior Jigalo</a></li>
+                <li class="nav-item"><a class="nav-link" href="daniel.html">Daniel Armaganian</a></li>
+                <li class="nav-item"><a class="nav-link" href="yonatan.html">Yonatan Sherer</a></li>
+                <li class="nav-item"><a class="nav-link" href="project.html">Project Results</a></li>
+                <li class="nav-item">
+                </li>
+            </ul>
+        </div>
     </nav>
-</header>
-<main>
-    <h1>Lior Jigalo</h1>
-    <section id="hobbies">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Video Games</li>
-            <li>Basketball</li>
-            <li>Walking</li>
-        </ul>
-    </section>
-    <section id="courses">
-        <h2>Courses</h2>
-        <table border="1">
-            <tr>
-                <th>Course Name</th>
-                <th>Grade</th>
-            </tr>
-            <tr>
-                <td>Introduction to Computer Science</td>
-                <td>99</td>
-            </tr>
-            <tr>
-                <td>Algorithms</td>
-                <td>88</td>
-            </tr>
-            <tr>
-                <td>Operating Systems</td>
-                <td>77</td>
-            </tr>
-        </table>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:audiblemaple@gmail.com">audiblemaple@gmail.com</a></p>
-    </section>
-</main>
+    </header>
+    <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7);">
+        <main class="container mt-4">
+            <h1>Lior Jigalo</h1>
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">Video Games</li>
+                    <li class="nav-item">Basketball</li>
+                    <li class="nav-item">Walking</li>
+                </ul>
+            </section>
+            <section id="courses">
+                <h2>Courses</h2>
+                <table border="1">
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>Introduction to Computer Science</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>Algorithms</td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems</td>
+                        <td>77</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a class="nav-link" href="mailto:audiblemaple@gmail.com">audiblemaple@gmail.com</a></p>
+            </section>
+        </main>
+    </div>
+
 </body>
+
 </html>
