@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Wizards</title>
+    <title>Project Result</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -285,29 +285,30 @@
         <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7); font-weight: bold;">
             <div class="card-body" id="view_9">
                 <h5 class="card-title text-center">PageRank</h5>
-                <p>We took 10 pages of movies returned from the query:<br></p>
-                <h5 class="text-center">Which movies have the best directors. </h5>
-                <p>And this is the PageRank score of them: <br></p>
+                <p>For each query, 20 relevant pages were returned.
+                    We tested the connectivity between these pages using an algorithm that goes through the links of
+                    each page and checks whether the other pages exist between them. We collected 10 links from the
+                    results, used the algorithm proposed in the course to create a graph and finally calculated the
+                    PageRank value.<br></p>
+                <h5 class="text-center">Our Algorithm</h5>
                 <div class="d-flex justify-content-center">
-                    <img class="card-img-top img-fluid" style="width: 75%;" src="images/pagerank.png" alt="pagerank">
+                    <img class="card-img-top img-fluid" style="width: 75%;" src="images/algorithm.png" alt="pagerank">
                 </div>
-                <p><br>You can see that the highest PageRank score we got is for the movie:</p>
+                <br></br>
+                <h5 class="text-center">Results</h5>
                 <div class="d-flex justify-content-center">
-                    <img class="card-img-top img-fluid" style="width: 15%;" src="images/journey-2.png" alt="journey-2">
+                    <img class="card-img-top img-fluid" style="width: 75%;" src="images/algorithm_results.png"
+                        alt="pagerank">
+                </div>
+                <p><br>We used the algorithm proposed in the course to create a graph and finally calculate the PageRank
+                    value.
+                    Here are the results:</p>
+                <div class="d-flex justify-content-center">
+                    <img class="card-img-top img-fluid" style="width: 70%;" src="images/pagerank.png" alt="journey-2">
                 </div><br>
-                <h5 class="text-center">Journey 2: The Mysterious Island</h5><br>
-
-                <p>We used networkx to create the graph and calculate PageRank as follows:<br>
-                    nx.pagerank(G) where G is the graph built using nx.DiGraph().
-                </p>
-                <div class="d-flex justify-content-center">
-                    <img class="card-img-top img-fluid" style="width: 40%;" src="images/pip_install.png" alt="pip">
-                    <img class="card-img-top img-fluid" style="width: 20%;" src="images/networkx.png" alt="networkx">
-                </div>
-                <div class="d-flex justify-content-center">
-                    <img class="card-img-top img-fluid" style="width: 40%;" src="images/pagerank-code.png"
-                        alt="pagerank-code">
-                </div>
+                <p><br>You can see that the highest PageRank score we got is for the page H:</p>
+                <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+                    class="btn btn-info" target="_blank">Link to The Page</a>
                 <div class="text-center mb-3">
                     <a href="javascript:void(0)" class="back-to-top-button" onclick="scrollToTop()">Back to Top</a>
                 </div>
@@ -326,9 +327,8 @@
         <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7); font-weight: bold;">
             <div class="card-body" id="view_10">
                 <h5 class="card-title text-center">Feedback Relevance</h5>
-                <p>The page where the user sees the selected movies with their information and can rate whether the
-                    returned
-                    movie is relevant or not :<br></p>
+                <p>User relevance data indicates that they are interested in pages that contain information about
+                    medications that prevent diseases in advance.<br></p>
                 <div class="d-flex justify-content-center">
                     <img class="card-img-top img-fluid" style="width: 75%;" src="images/page-of-relevant.png"
                         alt="page-of-relevant">
