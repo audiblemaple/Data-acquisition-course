@@ -221,6 +221,28 @@
         </div>
     </div>
 
+    <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7);">
+        <div class="card-body" id="view_6">
+            <h5 class="card-title text-center">Inverted Index</h5>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 40%;" src="images/inverted_index.png"
+                    alt="inverted_index">
+            </div>
+        </div>
+
+        <div class="text-center mb-3">
+            <a href="javascript:void(0)" class="back-to-top-button" onclick="scrollToTop()">Back to Top</a>
+        </div>
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" // Smooth scrolling effect
+                });
+            }
+        </script>
+    </div>
 
 
     <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7); font-weight: bold;">
@@ -309,23 +331,142 @@
             <p>After analyzing the users' feedback, a more optimized query can be suggested:<br></p>
             <h6 class="text-center">"Common disease prevention drugs"<br><br></class>
             </h6>
-            <div class="text-center mb-3">
-                <a href="javascript:void(0)" class="back-to-top-button" onclick="scrollToTop()">Back to Top</a>
-            </div>
+            <br><br>
+            <h5 class="card-title text-center">Recall and Precision Calculations</h5>
+            <table class="table table-bordered ">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>J1</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>NR</td>
+                        <td>NR</td>
+                        <td>R</td>
+                        <td>NR</td>
+                    </tr>
+                    <tr>
+                        <td>J2</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>NR</td>
+                        <td>R</td>
+                        <td>NR</td>
+                        <td>R</td>
+                        <td>NR</td>
+                        <td>R</td>
+                        <td>R</td>
+                        <td>R</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <script>
-                function scrollToTop() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth" // Smooth scrolling effect
-                    });
-                }
-            </script>
+            <p><strong>Assumptions:</strong> When you search for the term covid 19 on the WHO website, you get 20 pages
+                of results, with each page containing 20 different articles, meaning a total of 400 articles related to
+                covid 19. Let's assume that we reviewed about 10% of them, meaning 40 articles that meet the criteria.
+            </p>
 
+            <p><strong>Calculations:</strong></p>
+            <ul>
+                <li><strong>Precision (J1):</strong> 7/10 = 0.7</li>
+                <li><strong>Recall (J1):</strong> 7/40 = 0.175</li>
+                <li><strong>Precision (J2):</strong> 7/10 = 0.7</li>
+                <li><strong>Recall (J2):</strong> 7/40 = 0.175</li>
+            </ul>
 
         </div>
+        <div class="text-center mb-3">
+            <a href="javascript:void(0)" class="back-to-top-button" onclick="scrollToTop()">Back to Top</a>
+        </div>
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" // Smooth scrolling effect
+                });
+            }
+        </script>
     </div>
 
+    <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7); font-weight: bold;">
+        <div class="card-body" id="view_7">
+            <h5 class="card-title text-center">TF-IDF for : Which medicine is used for covid 19</h5>
+            <p>We will perform the calculations in an Excel calculation file on the "calculation" page.<br>
+                First, we will organize so that for each concept in the query (after remove stop words and endings),
+                the number of its appearances in each document will appear (taken from the index).<br>
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 60%;" src="images/term_in_doc.png" alt="term_in_doc">
+            </div>
+            <p><br>Then, using the SUM command on each column, we calculated the total number of words that appear on
+                the page. The total number of pages we calculated was equal to the number of columns.
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 60%;" src="images/word_in_each_doc.png"
+                    alt="word_in_each_doc">
+            </div>
+            <p><br>In the next step, we calculated the number of occurrences of each of the three words on all pages,
+                again using the SUM command on each line of each of the words.
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 40%;" src="images/term_all_docs.png"
+                    alt="term_all_docs">
+            </div>
+            <p><br>Calculates DF - the number of documents in which each term appears:
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 40%;" src="images/DF.png" alt="df">
+            </div>
+            <p><br>Calculates TF :
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 70%;" src="images/TF.png" alt="tf">
+            </div>
+
+            <p><br>Calculates IDF :
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 50%;" src="images/IDF.png" alt="idf">
+            </div>
+
+            <p><br>Calculates TF - IDF :
+            </p>
+            <div class="d-flex justify-content-center">
+                <img class="card-img-top img-fluid" style="width: 75%;" src="images/TF-IDF.png" alt="tf-idf">
+            </div>
+        </div>
+        <div class="text-center mb-3">
+            <a href="javascript:void(0)" class="back-to-top-button" onclick="scrollToTop()">Back to Top</a>
+        </div>
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" // Smooth scrolling effect
+                });
+            }
+        </script>
+    </div>
 
 
     <div class="card mb-4" style="background-color: rgba(255, 255, 255, 0.7); font-weight: bold;">
@@ -342,9 +483,6 @@
             <p>&copy; 2024 - 2025 Crawl Commandos. All rights reserved.</p>
         </div>
     </div>
-
-
-
     <script src="script.js"></script>
 </body>
 
